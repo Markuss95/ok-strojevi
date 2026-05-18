@@ -1,0 +1,24 @@
+# Render Blueprint for the API server.
+# MongoDB: use MongoDB Atlas and set MONGODB_URI in the Render dashboard
+# (not committed here, since it contains credentials).
+
+services:
+  - type: web
+    name: ok-strojevi-api
+    runtime: node
+    rootDir: server
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: MONGODB_URI
+        sync: false
+      - key: CLIENT_ORIGIN
+        sync: false

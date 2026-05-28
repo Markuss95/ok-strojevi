@@ -8,7 +8,8 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "seed:admin": "tsx src/scripts/seedAdmin.ts",
-    "seed:machines": "tsx src/scripts/seedMachines.ts"
+    "seed:machines": "tsx src/scripts/seedMachines.ts",
+    "seed:sites": "tsx src/scripts/seedSites.ts"
   },
   "dependencies": {
     "@types/bcryptjs": "^2.4.6",

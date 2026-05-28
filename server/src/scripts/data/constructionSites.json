@@ -1,0 +1,362 @@
+[
+  {
+    "code": "1994",
+    "name": "AB Našice"
+  },
+  {
+    "code": "2001",
+    "name": "Tranzit"
+  },
+  {
+    "code": "5014",
+    "name": "Betonara"
+  },
+  {
+    "code": "21098",
+    "name": "Retencija Glogovica"
+  },
+  {
+    "code": "21075",
+    "name": "AB Našice skladište rasutog mat."
+  },
+  {
+    "code": "21102",
+    "name": "Šire NA područje"
+  },
+  {
+    "code": "22039",
+    "name": "Rekon. nasipa Batina"
+  },
+  {
+    "code": "22060",
+    "name": "Osijek - izgradnja Islamskog centra"
+  },
+  {
+    "code": "22065",
+    "name": "1. Gimnazija OS"
+  },
+  {
+    "code": "23006",
+    "name": "Most preko rijeke Vučice"
+  },
+  {
+    "code": "23010",
+    "name": "Podvožnjak na DC 517, BM"
+  },
+  {
+    "code": "23015",
+    "name": "Sisak"
+  },
+  {
+    "code": "23018",
+    "name": "Rek. - Baćin Dol - Rešetari"
+  },
+  {
+    "code": "23020",
+    "name": "Log Expert L. - Park Osijek"
+  },
+  {
+    "code": "23022",
+    "name": "Gundulićeva Ulica"
+  },
+  {
+    "code": "23023",
+    "name": "Sljemenska, Kolodvorska i Kapelska Ulica"
+  },
+  {
+    "code": "23032",
+    "name": "Reg. d.o.r. Dunav - Urbanističko uređenje grada VU"
+  },
+  {
+    "code": "23048",
+    "name": "Zračna luka Osijek"
+  },
+  {
+    "code": "23049",
+    "name": "Reg. d.o.r. Dunav - Urbanističko uređenje grada VU"
+  },
+  {
+    "code": "23050",
+    "name": "Koridor Vc"
+  },
+  {
+    "code": "23053",
+    "name": "Rekon. raskrižja u k.t - Oprisavci"
+  },
+  {
+    "code": "23054",
+    "name": "Građenje dionice LC42042 prema Surevici"
+  },
+  {
+    "code": "23071",
+    "name": "Izvanredno održavanje ceste Belišće"
+  },
+  {
+    "code": "23075",
+    "name": "Retail Park Retfala Nova"
+  },
+  {
+    "code": "24001",
+    "name": "Izgradnja propusta Nemetin"
+  },
+  {
+    "code": "24004",
+    "name": "Betonara Štitar"
+  },
+  {
+    "code": "24005",
+    "name": "Rest. toka Dunava - Zmajevički Dunavac"
+  },
+  {
+    "code": "24008",
+    "name": "Prist. cesta i most Vuka"
+  },
+  {
+    "code": "24009",
+    "name": "Nuštar - Vukovar"
+  },
+  {
+    "code": "24010",
+    "name": "Obilaznica Vukovar"
+  },
+  {
+    "code": "24030",
+    "name": "Radovi Na. Brez. i Ordanja"
+  },
+  {
+    "code": "24042",
+    "name": "HEY PARK VK"
+  },
+  {
+    "code": "24044",
+    "name": "Našice - Dom za starije"
+  },
+  {
+    "code": "24050",
+    "name": "Rek. kan. mreže Nemetin"
+  },
+  {
+    "code": "24051",
+    "name": "Građ. obrt. radovi - tvor cem. Našice"
+  },
+  {
+    "code": "24057",
+    "name": "Trnava"
+  },
+  {
+    "code": "24058",
+    "name": "Dom za starije Vrpolje"
+  },
+  {
+    "code": "24060",
+    "name": "Našice - Rad. na san. kanalali."
+  },
+  {
+    "code": "24065",
+    "name": "REKON. DC ERDUT - GP DALJ"
+  },
+  {
+    "code": "24076",
+    "name": "Dom za starije SB"
+  },
+  {
+    "code": "25003",
+    "name": "Pješačka staza, kružni tok - Osijek"
+  },
+  {
+    "code": "25006",
+    "name": "Ricardo"
+  },
+  {
+    "code": "25007",
+    "name": "Općina Darda - održ. nerazvr. cesta"
+  },
+  {
+    "code": "25008",
+    "name": "San. kol. sus. koška, niza i ladim."
+  },
+  {
+    "code": "25009",
+    "name": "Ladimirevci"
+  },
+  {
+    "code": "25013",
+    "name": "Ricardo"
+  },
+  {
+    "code": "25014",
+    "name": "Baras"
+  },
+  {
+    "code": "25015",
+    "name": "Novska"
+  },
+  {
+    "code": "25016",
+    "name": "Bizovac"
+  },
+  {
+    "code": "25019",
+    "name": "Divaltova i Vukovarska"
+  },
+  {
+    "code": "25021",
+    "name": "Klisa-Vukovar rekonstrukcija DC2"
+  },
+  {
+    "code": "25023",
+    "name": "Akumulacija Breznica"
+  },
+  {
+    "code": "25025",
+    "name": "Autopraonica Belišće"
+  },
+  {
+    "code": "25026",
+    "name": "Slobodna Vlast - Ratkov Dol"
+  },
+  {
+    "code": "25028",
+    "name": "Tranzit -Slobodnica održavanje mosta A3"
+  },
+  {
+    "code": "25030",
+    "name": "Rekon. ceste Ul.M.Gubca - Belišće"
+  },
+  {
+    "code": "25032",
+    "name": "Pripremni radovi - NCI prostora Čepin"
+  },
+  {
+    "code": "25033",
+    "name": "PS Beli Manastir"
+  },
+  {
+    "code": "25034",
+    "name": "PS Đakovo"
+  },
+  {
+    "code": "25040",
+    "name": "Beli Manastir rek. DC7"
+  },
+  {
+    "code": "25051",
+    "name": "Osatina Viškovci"
+  },
+  {
+    "code": "25052",
+    "name": "izgradnje manipulativnih površina oko MSH Slašćak u Viškovcima"
+  },
+  {
+    "code": "25053 -A",
+    "name": "Vijenac Josipa Kozarca - REKONSTRUKCIJA I IZGRADNJA VODOOPSKRBNE MREŽE"
+  },
+  {
+    "code": "25054",
+    "name": "Nexe cementara"
+  },
+  {
+    "code": "25057",
+    "name": "Bistrička Ulica"
+  },
+  {
+    "code": "25062",
+    "name": "Pevex Đakovo"
+  },
+  {
+    "code": "25066",
+    "name": "Izgradnja pristupne ceste za Centar za starije Našice"
+  },
+  {
+    "code": "25067",
+    "name": "Copacabana Osijek"
+  },
+  {
+    "code": "25074",
+    "name": "Kaufland Osijek"
+  },
+  {
+    "code": "25075",
+    "name": "Dunavska Ulica Osijek"
+  },
+  {
+    "code": "25076",
+    "name": "Radovi na pripremi terena i izradi platoa za kontejnersko  naselje na projektu jabil"
+  },
+  {
+    "code": "25078",
+    "name": "Bijelo Brdo"
+  },
+  {
+    "code": "25087",
+    "name": "Održavanje kolnika DC 51"
+  },
+  {
+    "code": "25088",
+    "name": "Tvornica mliječnih proizvoda Osijek"
+  },
+  {
+    "code": "25095",
+    "name": "Livana"
+  },
+  {
+    "code": "25097",
+    "name": "Darda - Izra. Man. Pov."
+  },
+  {
+    "code": "25099",
+    "name": "Farma Belje Popovac"
+  },
+  {
+    "code": "25104",
+    "name": "Belišće igralište"
+  },
+  {
+    "code": "25112",
+    "name": "O.Š. Vladimir Nazor Đakovo"
+  },
+  {
+    "code": "25114",
+    "name": "Reciklažno dvorište Đakovo"
+  },
+  {
+    "code": "25119",
+    "name": "Pripremni i zemljani radovi u Sljemenskoj"
+  },
+  {
+    "code": "26002",
+    "name": "Pevex Požega"
+  },
+  {
+    "code": "26003",
+    "name": "OŠ M. P. KATANČIĆA - Valpovo"
+  },
+  {
+    "code": "26006",
+    "name": "RWA Osijek"
+  },
+  {
+    "code": "25080",
+    "name": "Vidovci - Redovno održavanje Ul."
+  },
+  {
+    "code": "25103",
+    "name": "Jabil - Izvođenje građevinskih radova"
+  },
+  {
+    "code": "26001",
+    "name": "OŠ Belišće"
+  },
+  {
+    "code": "25053",
+    "name": "Rekonstrukcija Vodoop. MRE. J. Kozarca"
+  },
+  {
+    "code": "26005 - A",
+    "name": "Donjodravska"
+  },
+  {
+    "code": "26017",
+    "name": "Tomašanci - Asf. Radovi"
+  }
+]

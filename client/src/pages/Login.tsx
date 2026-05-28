@@ -25,34 +25,44 @@ export function Login() {
   }
 
   return (
-    <div style={{ maxWidth: 360, margin: '80px auto', fontFamily: 'sans-serif' }}>
-      <h1>OK Strojevi</h1>
-      <form onSubmit={onSubmit}>
-        <label style={{ display: 'block', marginBottom: 12 }}>
-          E-pošta
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            style={{ width: '100%', padding: 8 }}
-          />
-        </label>
-        <label style={{ display: 'block', marginBottom: 12 }}>
-          Lozinka
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            style={{ width: '100%', padding: 8 }}
-          />
-        </label>
-        {error && <p style={{ color: 'crimson' }}>{error}</p>}
-        <button type="submit" disabled={busy} style={{ padding: '8px 16px' }}>
-          {busy ? 'Prijava…' : 'Prijavi se'}
-        </button>
-      </form>
+    <div className="min-h-screen flex items-center justify-center px-4">
+      <div className="card w-full max-w-sm p-6">
+        <h1 className="text-center mb-6">OK Strojevi</h1>
+        <form onSubmit={onSubmit} className="space-y-4">
+          <div>
+            <label className="label" htmlFor="email">E-pošta</label>
+            <input
+              id="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="field"
+              autoComplete="email"
+            />
+          </div>
+          <div>
+            <label className="label" htmlFor="password">Lozinka</label>
+            <input
+              id="password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              className="field"
+              autoComplete="current-password"
+            />
+          </div>
+          {error && (
+            <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded px-3 py-2">
+              {error}
+            </p>
+          )}
+          <button type="submit" disabled={busy} className="btn-primary w-full">
+            {busy ? 'Prijava…' : 'Prijavi se'}
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

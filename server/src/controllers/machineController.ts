@@ -31,3 +31,57 @@ export async function createMachine(req: Request, res: Response): Promise<void> 
   });
   res.status(201).json({ machine });
 }
+
+export async function updateMachine(req: Request, res: Response): Promise<void> {
+  const { id } = req.params;
+  const { name, inv, category } = req.body ?? {};
+
+  const machine = await Machine.findById(id);
+  if (!machine) {
+    res.status(404).json({ error: 'Stroj nije pronađen' });
+    return;
+  }
+
+  if (name !== undefined) {
+    const next = String(name).trim();
+    if (!next) {
+      res.status(400).json({ error: 'Naziv stroja je obavezan' });
+      return;
+    }
+    machine.name = next;
+  }
+
+  if (inv !== undefined) {
+    const next = String(inv).trim();
+    if (!next) {
+      res.status(400).json({ error: 'Inventarni broj je obavezan' });
+      return;
+    }
+    if (next !== machine.inv) {
+      const clash = await Machine.findOne({ inv: next });
+      if (clash) {
+        res.status(409).json({ error: 'Stroj s tim inventarnim brojem već postoji' });
+        return;
+      }
+    }
+    machine.inv = next;
+  }
+
+  if (category !== undefined) {
+    const next = String(category).trim();
+    machine.category = next || undefined;
+  }
+
+  await machine.save();
+  res.json({ machine });
+}
+
+export async function deleteMachine(req: Request, res: Response): Promise<void> {
+  const { id } = req.params;
+  const machine = await Machine.findByIdAndDelete(id);
+  if (!machine) {
+    res.status(404).json({ error: 'Stroj nije pronađen' });
+    return;
+  }
+  res.json({ ok: true });
+}

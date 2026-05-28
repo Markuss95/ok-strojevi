@@ -3,6 +3,12 @@ import { useEffect, useRef, useState } from 'react';
 export interface Machine {
   _id: string;
   name: string;
+  inv: string;
+  category?: string;
+}
+
+function machineLabel(m: Machine): string {
+  return `${m.name} (${m.inv})`;
 }
 
 interface Props {
@@ -26,13 +32,17 @@ export function MachineSelect({ machines, value, onChange }: Props) {
     return () => document.removeEventListener('mousedown', onClickOutside);
   }, []);
 
-  const filtered = machines.filter((m) =>
-    m.name.toLowerCase().includes(query.trim().toLowerCase())
+  const q = query.trim().toLowerCase();
+  const filtered = machines.filter(
+    (m) =>
+      m.name.toLowerCase().includes(q) ||
+      m.inv.toLowerCase().includes(q) ||
+      (m.category ?? '').toLowerCase().includes(q)
   );
 
   function select(machine: Machine) {
     onChange(machine);
-    setQuery(machine.name);
+    setQuery(machineLabel(machine));
     setOpen(false);
   }
 
@@ -40,10 +50,10 @@ export function MachineSelect({ machines, value, onChange }: Props) {
     <div ref={containerRef} style={{ position: 'relative' }}>
       <input
         type="text"
-        value={open ? query : value?.name ?? query}
+        value={open ? query : value ? machineLabel(value) : query}
         placeholder="Odaberite stroj…"
         onFocus={() => {
-          setQuery(value?.name ?? '');
+          setQuery(value ? machineLabel(value) : '');
           setOpen(true);
         }}
         onChange={(e) => {
@@ -84,7 +94,11 @@ export function MachineSelect({ machines, value, onChange }: Props) {
                   background: value?._id === m._id ? '#eef' : '#fff',
                 }}
               >
-                {m.name}
+                <div>{m.name}</div>
+                <div style={{ fontSize: 12, color: '#666' }}>
+                  Inv. br. {m.inv}
+                  {m.category ? ` · ${m.category}` : ''}
+                </div>
               </li>
             ))
           )}

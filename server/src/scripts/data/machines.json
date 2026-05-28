@@ -1,0 +1,612 @@
+[
+  {
+    "name": "AUTOBAGER LIEBHERR 914-comp",
+    "inv": "49787",
+    "category": "AUTOBAGERI"
+  },
+  {
+    "name": "AUTOBAGER LIEBHERR 914-comp",
+    "inv": "49789",
+    "category": "AUTOBAGERI"
+  },
+  {
+    "name": "AUTOBAGER LIEBHERR 918-comp",
+    "inv": "49788",
+    "category": "AUTOBAGERI"
+  },
+  {
+    "name": "AUTOBAGER LIEBHERR 916- stand",
+    "inv": "49932",
+    "category": "AUTOBAGERI"
+  },
+  {
+    "name": "AUTOBAGER LIEBHERR 914-comp",
+    "inv": "50281",
+    "category": "AUTOBAGERI"
+  },
+  {
+    "name": "AUTOBAGER LIEBHERR 914-comp",
+    "inv": "50285",
+    "category": "AUTOBAGERI"
+  },
+  {
+    "name": "AUTOBAGER LIEBHERR 914-comp",
+    "inv": "50447",
+    "category": "AUTOBAGERI"
+  },
+  {
+    "name": "AUTOBAGER LIEBHERR 914 - stand",
+    "inv": "50467",
+    "category": "AUTOBAGERI"
+  },
+  {
+    "name": "AUTOBAGER LIEBHERR 914 - comp",
+    "inv": "50580",
+    "category": "AUTOBAGERI"
+  },
+  {
+    "name": "AUTOBAGER LIEBHERR 914 - stand",
+    "inv": "50851",
+    "category": "AUTOBAGERI"
+  },
+  {
+    "name": "AUTOBAGER LIEBHERR 916 - stand",
+    "inv": "50901",
+    "category": "AUTOBAGERI"
+  },
+  {
+    "name": "AUTOBAGER LIEBHERR 916 - stand",
+    "inv": "51063",
+    "category": "AUTOBAGERI"
+  },
+  {
+    "name": "AUTOBAGER LIEBHERR 916 - comp",
+    "inv": "51112",
+    "category": "AUTOBAGERI"
+  },
+  {
+    "name": "AUTOBAGER LIEBHERR 916 - comp",
+    "inv": "51512",
+    "category": "AUTOBAGERI"
+  },
+  {
+    "name": "AUTOBAGER LIEBHERR 916 - comp",
+    "inv": "51521",
+    "category": "AUTOBAGERI"
+  },
+  {
+    "name": "AUTOBAGER LIEBHERR 916 - comp",
+    "inv": "51525",
+    "category": "AUTOBAGERI"
+  },
+  {
+    "name": "MIDI BAGER JCB 8 t",
+    "inv": "49775",
+    "category": "BAGERI"
+  },
+  {
+    "name": "BAGER LIEBHER 924",
+    "inv": "49786",
+    "category": "BAGERI"
+  },
+  {
+    "name": "BAGER LIEBHER 924",
+    "inv": "49790",
+    "category": "BAGERI"
+  },
+  {
+    "name": "BAGER LIEBHER 924",
+    "inv": "50172",
+    "category": "BAGERI"
+  },
+  {
+    "name": "BAGER LIEBHER 936",
+    "inv": "50239",
+    "category": "BAGERI"
+  },
+  {
+    "name": "BAGER LIEBHER 914 R",
+    "inv": "50546",
+    "category": "BAGERI"
+  },
+  {
+    "name": "BAGER LIEBHER 920 R",
+    "inv": "50575",
+    "category": "BAGERI"
+  },
+  {
+    "name": "BAGER LIEBHER 926 LR",
+    "inv": "51295",
+    "category": "BAGERI"
+  },
+  {
+    "name": "BAGER LIEBHER 930",
+    "inv": "51581",
+    "category": "BAGERI"
+  },
+  {
+    "name": "BAGER LIU GONG",
+    "inv": "51938",
+    "category": "BAGERI"
+  },
+  {
+    "name": "KOMBINIRKA JCB 4 C X+ček+mješ",
+    "inv": "50661",
+    "category": "KOMBINIRKE"
+  },
+  {
+    "name": "KOMBINIRKA JCB 4 C X+ček+mješ",
+    "inv": "50667",
+    "category": "KOMBINIRKE"
+  },
+  {
+    "name": "KOMBINIRKA JCB 4 C X+ček",
+    "inv": "50760",
+    "category": "KOMBINIRKE"
+  },
+  {
+    "name": "KOMBINIRKA JCB 4 C X+ček+mješ",
+    "inv": "51058",
+    "category": "KOMBINIRKE"
+  },
+  {
+    "name": "KOMBINIRKA JCB 4 CX",
+    "inv": "51076",
+    "category": "KOMBINIRKE"
+  },
+  {
+    "name": "KOMBINIRKA JCB 4 CX",
+    "inv": "51120",
+    "category": "KOMBINIRKE"
+  },
+  {
+    "name": "KOMBINIRKA JCB 4 CX",
+    "inv": "51116",
+    "category": "KOMBINIRKE"
+  },
+  {
+    "name": "KOMBINIRKA JCB 4 CX pro 80",
+    "inv": "52153",
+    "category": "KOMBINIRKE"
+  },
+  {
+    "name": "BULDOZER D H 6",
+    "inv": "43823",
+    "category": "BULDOZERI"
+  },
+  {
+    "name": "BULDOZER LIEBHERR 734",
+    "inv": "49985",
+    "category": "BULDOZERI"
+  },
+  {
+    "name": "BULDOZER LIEBHERR 734 lgp",
+    "inv": "50094",
+    "category": "BULDOZERI"
+  },
+  {
+    "name": "BULDOZER LIEBHERR 724 lgp",
+    "inv": "50221",
+    "category": "BULDOZERI"
+  },
+  {
+    "name": "BULDOZER LIEBHERR 734 xp",
+    "inv": "50517",
+    "category": "BULDOZERI"
+  },
+  {
+    "name": "BULDOZER LIEBHERR 726 LGP",
+    "inv": "51588",
+    "category": "BULDOZERI"
+  },
+  {
+    "name": "KOMPAKTOR UNIMOG 1400",
+    "inv": "43404",
+    "category": "KOMPAKTORI"
+  },
+  {
+    "name": "GREDER CATERPILLAR 140 H",
+    "inv": "42169",
+    "category": "GREDERI"
+  },
+  {
+    "name": "GREDER NEW HOLLAND",
+    "inv": "47752",
+    "category": "GREDERI"
+  },
+  {
+    "name": "GREDER CATERPILLAR 140 GC AWD",
+    "inv": "50850",
+    "category": "GREDERI"
+  },
+  {
+    "name": "GREDER CATERPILLAR 120 m joy",
+    "inv": "51037",
+    "category": "GREDERI"
+  },
+  {
+    "name": "GREDER CATERPILLAR 120 m joy",
+    "inv": "51804",
+    "category": "GREDERI"
+  },
+  {
+    "name": "UTOVARIVAČ RENDERS RL 100",
+    "inv": "1572",
+    "category": "UTOVARIVAČI"
+  },
+  {
+    "name": "UTOVARIVAČ ALLARD 680",
+    "inv": "42749",
+    "category": "UTOVARIVAČI"
+  },
+  {
+    "name": "UTOVARIVAČ Liebherr 538",
+    "inv": "43757",
+    "category": "UTOVARIVAČI"
+  },
+  {
+    "name": "UTOVARIVAČ KRAMER",
+    "inv": "44462",
+    "category": "UTOVARIVAČI"
+  },
+  {
+    "name": "UTOVARIVAČ LIebherr  550- rab",
+    "inv": "50010",
+    "category": "UTOVARIVAČI"
+  },
+  {
+    "name": "UTOVARIVAČ Liebherr  514-stereo",
+    "inv": "50220",
+    "category": "UTOVARIVAČI"
+  },
+  {
+    "name": "UTOVARIVAČ LIebherr  550- rab",
+    "inv": "50707",
+    "category": "UTOVARIVAČI"
+  },
+  {
+    "name": "UTOVARIVAČ LIebherr  550",
+    "inv": "51795",
+    "category": "UTOVARIVAČI"
+  },
+  {
+    "name": "UTOVARIVAČ LIebherr  518",
+    "inv": "51815",
+    "category": "UTOVARIVAČI"
+  },
+  {
+    "name": "VALJAK BOMAG BW 211",
+    "inv": "9-42075",
+    "category": "VALJCI ZA NASIP"
+  },
+  {
+    "name": "VALJAK BOMAG BW 213",
+    "inv": "9-42739",
+    "category": "VALJCI ZA NASIP"
+  },
+  {
+    "name": "VALJAK HAMM 3414 br 1",
+    "inv": "46375",
+    "category": "VALJCI ZA NASIP"
+  },
+  {
+    "name": "VALJAK bomag vib ploče",
+    "inv": "49784",
+    "category": "VALJCI ZA NASIP"
+  },
+  {
+    "name": "VALJAK BOMAG BW 213",
+    "inv": "47753/A",
+    "category": "VALJCI ZA NASIP"
+  },
+  {
+    "name": "VALJAK BOMAG BW 213 + vib ploče",
+    "inv": "M/49981",
+    "category": "VALJCI ZA NASIP"
+  },
+  {
+    "name": "VALJAK BOMAG BW 213 + vib ploče",
+    "inv": "50108",
+    "category": "VALJCI ZA NASIP"
+  },
+  {
+    "name": "VALJAK BOMAG BW 213 + ČEPovi",
+    "inv": "50274",
+    "category": "VALJCI ZA NASIP"
+  },
+  {
+    "name": "VALJAK BOMAG BW 213 + vib ploče",
+    "inv": "50764",
+    "category": "VALJCI ZA NASIP"
+  },
+  {
+    "name": "VALJAK BOMAG BW 213 + vib ploče",
+    "inv": "51081",
+    "category": "VALJCI ZA NASIP"
+  },
+  {
+    "name": "VALJAK BOMAG BW 213",
+    "inv": "51585",
+    "category": "VALJCI ZA NASIP"
+  },
+  {
+    "name": "VALJAK BOMAG BW 213 + vib ploče",
+    "inv": "51638",
+    "category": "VALJCI ZA NASIP"
+  },
+  {
+    "name": "TRAKTOR NEW HOLLAND 80-66 DTS",
+    "inv": "1595",
+    "category": "TRAKTORI"
+  },
+  {
+    "name": "TRAKTOR TORPEDO",
+    "inv": "940",
+    "category": "TRAKTORI"
+  },
+  {
+    "name": "TRAKTOR FENDT",
+    "inv": "44936",
+    "category": "TRAKTORI"
+  },
+  {
+    "name": "TRAKTOR JOHAN DEERE",
+    "inv": "50044",
+    "category": "TRAKTORI"
+  },
+  {
+    "name": "TRAKTOR CASE",
+    "inv": "50861",
+    "category": "TRAKTORI"
+  },
+  {
+    "name": "TRAKTOR steyer",
+    "inv": "50995",
+    "category": "TRAKTORI"
+  },
+  {
+    "name": "MINI UTOVARIVAČ BOBCAT S-175 HF",
+    "inv": "44178/A",
+    "category": "OSTALA OPREMA ZA ASFALTE"
+  },
+  {
+    "name": "MINI UTOVARIVAČ BOBCAT S-650",
+    "inv": "50484",
+    "category": "OSTALA OPREMA ZA ASFALTE"
+  },
+  {
+    "name": "FREZA ZA ASFALT WITGEN 200 i",
+    "inv": "50109",
+    "category": "OSTALA OPREMA ZA ASFALTE"
+  },
+  {
+    "name": "WIRTGEN KMA",
+    "inv": "51686",
+    "category": "OSTALA OPREMA ZA ASFALTE"
+  },
+  {
+    "name": "VILIČAR",
+    "inv": "2421",
+    "category": "VILIČARI"
+  },
+  {
+    "name": "TELEVILIČAR LIEBHERR",
+    "inv": "50961",
+    "category": "VILIČARI"
+  },
+  {
+    "name": "TELEVILIČAR MANITOU MRT 2660",
+    "inv": "51634",
+    "category": "VILIČARI"
+  },
+  {
+    "name": "FINIŠER VÖGELLE 2100 - 2",
+    "inv": "43988/A",
+    "category": "FINIŠERI ZA ASFALT"
+  },
+  {
+    "name": "FINIŠER VOGELLE 1800 - 2",
+    "inv": "44172",
+    "category": "FINIŠERI ZA ASFALT"
+  },
+  {
+    "name": "FINIŠER VOGELLE 1900-žuti",
+    "inv": "47741",
+    "category": "FINIŠERI ZA ASFALT"
+  },
+  {
+    "name": "FINIŠER VOGELLE 2100",
+    "inv": "47743",
+    "category": "FINIŠERI ZA ASFALT"
+  },
+  {
+    "name": "FINIŠER VOGELLE 1803-2",
+    "inv": "47754",
+    "category": "FINIŠERI ZA ASFALT"
+  },
+  {
+    "name": "FINIŠER VOGELLE S 800",
+    "inv": "50502",
+    "category": "FINIŠERI ZA ASFALT"
+  },
+  {
+    "name": "FINIŠER VOGELLE 2100-3",
+    "inv": "50509",
+    "category": "FINIŠERI ZA ASFALT"
+  },
+  {
+    "name": "FINIŠER VOGELLE 1803-3",
+    "inv": "51341",
+    "category": "FINIŠERI ZA ASFALT"
+  },
+  {
+    "name": "FINIŠER VOGELLE 2100-5",
+    "inv": "51883",
+    "category": "FINIŠERI ZA ASFALT"
+  },
+  {
+    "name": "FINIŠER WIRTGEN SP-250",
+    "inv": "42197/A",
+    "category": "FINIŠERI ZA BETON"
+  },
+  {
+    "name": "VALJAK BOMAG BW 24 RH 24 t",
+    "inv": "42782/A",
+    "category": "GUMENI VALJCI"
+  },
+  {
+    "name": "VALJAK BOMAG BW 24 RH 24 t",
+    "inv": "44231/A",
+    "category": "GUMENI VALJCI"
+  },
+  {
+    "name": "VALJAK BOMAG BW 151-AC-4",
+    "inv": "42783/A",
+    "category": "KOMBINIRANI VALJCI ZA ASFALT i TAMPON"
+  },
+  {
+    "name": "VALJAK BOMAG BW 151-AC-4",
+    "inv": "44227/A",
+    "category": "KOMBINIRANI VALJCI ZA ASFALT i TAMPON"
+  },
+  {
+    "name": "VALJAK BOMAG 151 AC",
+    "inv": "43992/A",
+    "category": "KOMBINIRANI VALJCI ZA ASFALT i TAMPON"
+  },
+  {
+    "name": "VALJAK BOMAG 151 AC",
+    "inv": "44835/A",
+    "category": "KOMBINIRANI VALJCI ZA ASFALT i TAMPON"
+  },
+  {
+    "name": "VALJAK BOMAG 151 AC",
+    "inv": "44836/A",
+    "category": "KOMBINIRANI VALJCI ZA ASFALT i TAMPON"
+  },
+  {
+    "name": "VALJAK BOMAG 151 AC",
+    "inv": "44228/A",
+    "category": "KOMBINIRANI VALJCI ZA ASFALT i TAMPON"
+  },
+  {
+    "name": "VALJAK BOMAG 151 AC",
+    "inv": "47744/A",
+    "category": "KOMBINIRANI VALJCI ZA ASFALT i TAMPON"
+  },
+  {
+    "name": "VALJAK BOMAG 151 AC - 5",
+    "inv": "50002/A",
+    "category": "KOMBINIRANI VALJCI ZA ASFALT i TAMPON"
+  },
+  {
+    "name": "VALJAK BOMAG 151 AC - 5",
+    "inv": "50004/A",
+    "category": "KOMBINIRANI VALJCI ZA ASFALT i TAMPON"
+  },
+  {
+    "name": "VALJAK BOMAG 151 AC - 5",
+    "inv": "51854",
+    "category": "KOMBINIRANI VALJCI ZA ASFALT i TAMPON"
+  },
+  {
+    "name": "VALJAK BOMAG BW-170 AD",
+    "inv": "42215/A",
+    "category": "ČELIČNI VALJCI ZA ASFALT I TAMPON"
+  },
+  {
+    "name": "VALJAK BOMAG BW-174 AD-2",
+    "inv": "42781/A",
+    "category": "ČELIČNI VALJCI ZA ASFALT I TAMPON"
+  },
+  {
+    "name": "VALJAK BOMAG 161 AD-5",
+    "inv": "49703",
+    "category": "ČELIČNI VALJCI ZA ASFALT I TAMPON"
+  },
+  {
+    "name": "VALJAK BOMAG 161 AD-5",
+    "inv": "49704",
+    "category": "ČELIČNI VALJCI ZA ASFALT I TAMPON"
+  },
+  {
+    "name": "VALJAK BOMAG 161 AD-5",
+    "inv": "50001/A",
+    "category": "ČELIČNI VALJCI ZA ASFALT I TAMPON"
+  },
+  {
+    "name": "VALJAK BOMAG 161 AD-5",
+    "inv": "51853",
+    "category": "ČELIČNI VALJCI ZA ASFALT I TAMPON"
+  },
+  {
+    "name": "KRANSKA DIZALICA- FERO 1000",
+    "inv": "45986",
+    "category": "KRANOVI"
+  },
+  {
+    "name": "KRANSKA DIZALICA- CATANEO",
+    "inv": "44344",
+    "category": "KRANOVI"
+  },
+  {
+    "name": "KRANSKA DIZALICA- CATANEO",
+    "inv": "43964",
+    "category": "KRANOVI"
+  },
+  {
+    "name": "KRANSKA DIZALICA- CATANEO",
+    "inv": "49774",
+    "category": "KRANOVI"
+  },
+  {
+    "name": "KRANSKA DIZALICA- CATANEO",
+    "inv": "51653",
+    "category": "KRANOVI"
+  },
+  {
+    "name": "BW-120 AD-4",
+    "inv": "42716/A",
+    "category": "MALI VALJCI"
+  },
+  {
+    "name": "BW-100 AD-4",
+    "inv": "42721/A",
+    "category": "MALI VALJCI"
+  },
+  {
+    "name": "BW-80 AD-2",
+    "inv": "43989/A",
+    "category": "MALI VALJCI"
+  },
+  {
+    "name": "BW-80 AD-2",
+    "inv": "43990/A",
+    "category": "MALI VALJCI"
+  },
+  {
+    "name": "BW-80 AD-2",
+    "inv": "45345",
+    "category": "MALI VALJCI"
+  },
+  {
+    "name": "BW-90 AD-5",
+    "inv": "49702",
+    "category": "MALI VALJCI"
+  },
+  {
+    "name": "BW-120 AD - 5",
+    "inv": "50999",
+    "category": "MALI VALJCI"
+  },
+  {
+    "name": "BW-80 AD-5",
+    "inv": "51082",
+    "category": "MALI VALJCI"
+  },
+  {
+    "name": "BW-100 AD-5",
+    "inv": "51219",
+    "category": "MALI VALJCI"
+  }
+]

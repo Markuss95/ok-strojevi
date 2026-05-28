@@ -2,13 +2,17 @@ import mongoose, { Schema, Document, Model } from 'mongoose';
 
 export interface IMachine extends Document {
   name: string;
+  inv: string;
+  category?: string;
   createdAt: Date;
   updatedAt: Date;
 }
 
 const machineSchema = new Schema<IMachine>(
   {
-    name: { type: String, required: true, unique: true, trim: true },
+    name: { type: String, required: true, trim: true },
+    inv: { type: String, required: true, unique: true, trim: true },
+    category: { type: String, trim: true },
   },
   { timestamps: true }
 );

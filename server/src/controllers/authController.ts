@@ -6,13 +6,13 @@ export async function register(req: Request, res: Response): Promise<void> {
   const { name, email, password, role } = req.body ?? {};
 
   if (!name || !email || !password) {
-    res.status(400).json({ error: 'name, email and password are required' });
+    res.status(400).json({ error: 'Ime, e-pošta i lozinka su obavezni' });
     return;
   }
 
   const existing = await User.findOne({ email: String(email).toLowerCase() });
   if (existing) {
-    res.status(409).json({ error: 'Email already registered' });
+    res.status(409).json({ error: 'E-pošta je već registrirana' });
     return;
   }
 
@@ -20,7 +20,7 @@ export async function register(req: Request, res: Response): Promise<void> {
   let assignedRole: Role = 'user';
   if (role && ROLES.includes(role)) {
     if (role !== 'user' && req.auth?.role !== 'admin') {
-      res.status(403).json({ error: 'Only an admin can assign this role' });
+      res.status(403).json({ error: 'Samo administrator može dodijeliti ovu ulogu' });
       return;
     }
     assignedRole = role;
@@ -38,13 +38,13 @@ export async function login(req: Request, res: Response): Promise<void> {
   const { email, password } = req.body ?? {};
 
   if (!email || !password) {
-    res.status(400).json({ error: 'email and password are required' });
+    res.status(400).json({ error: 'E-pošta i lozinka su obavezni' });
     return;
   }
 
   const user = await User.findOne({ email: String(email).toLowerCase() });
   if (!user || !(await user.comparePassword(password))) {
-    res.status(401).json({ error: 'Invalid credentials' });
+    res.status(401).json({ error: 'Neispravna e-pošta ili lozinka' });
     return;
   }
 
@@ -55,7 +55,7 @@ export async function login(req: Request, res: Response): Promise<void> {
 export async function me(req: Request, res: Response): Promise<void> {
   const user = await User.findById(req.auth?.userId);
   if (!user) {
-    res.status(404).json({ error: 'User not found' });
+    res.status(404).json({ error: 'Korisnik nije pronađen' });
     return;
   }
   res.json({ user });

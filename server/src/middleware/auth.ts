@@ -18,7 +18,7 @@ export function requireAuth(
 ): void {
   const header = req.headers.authorization;
   if (!header || !header.startsWith('Bearer ')) {
-    res.status(401).json({ error: 'Authentication required' });
+    res.status(401).json({ error: 'Potrebna je prijava' });
     return;
   }
   try {
@@ -26,18 +26,18 @@ export function requireAuth(
     req.auth = { userId: payload.sub, role: payload.role };
     next();
   } catch {
-    res.status(401).json({ error: 'Invalid or expired token' });
+    res.status(401).json({ error: 'Neispravan ili istekao token' });
   }
 }
 
 export function requireRole(...roles: Role[]) {
   return (req: Request, res: Response, next: NextFunction): void => {
     if (!req.auth) {
-      res.status(401).json({ error: 'Authentication required' });
+      res.status(401).json({ error: 'Potrebna je prijava' });
       return;
     }
     if (!roles.includes(req.auth.role)) {
-      res.status(403).json({ error: 'Insufficient permissions' });
+      res.status(403).json({ error: 'Nemate dovoljno ovlasti' });
       return;
     }
     next();

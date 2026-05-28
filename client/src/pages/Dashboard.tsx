@@ -1,13 +1,15 @@
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext';
 
 const ROLE_LABELS: Record<string, string> = {
   admin: 'Administrator',
-  control: 'Control',
-  user: 'User',
+  control: 'Kontrola',
+  user: 'Korisnik',
 };
 
 export function Dashboard() {
   const { user, logout } = useAuth();
+  const navigate = useNavigate();
   if (!user) return null;
 
   return (
@@ -21,32 +23,36 @@ export function Dashboard() {
       >
         <h1>OK Strojevi</h1>
         <button onClick={logout} style={{ padding: '6px 12px' }}>
-          Log out
+          Odjava
         </button>
       </header>
       <p>
-        Signed in as <strong>{user.name}</strong> ({user.email})
+        Prijavljeni ste kao <strong>{user.name}</strong> ({user.email})
       </p>
       <p>
-        Role: <strong>{ROLE_LABELS[user.role] ?? user.role}</strong>
+        Uloga: <strong>{ROLE_LABELS[user.role] ?? user.role}</strong>
       </p>
 
       {user.role === 'admin' && (
         <section>
-          <h2>Administrator area</h2>
-          <p>Manage users, roles and all machines.</p>
+          <h2>Administratorski dio</h2>
+          <p>Upravljanje korisnicima, ulogama i svim strojevima.</p>
         </section>
       )}
       {user.role === 'control' && (
         <section>
-          <h2>Control area</h2>
-          <p>Review and verify machine records.</p>
+          <h2>Kontrolni dio</h2>
+          <p>Pregled i provjera zapisa o strojevima.</p>
         </section>
       )}
       {user.role === 'user' && (
         <section>
-          <h2>User area</h2>
-          <p>Your machines and tasks.</p>
+          <button
+            onClick={() => navigate('/dnevnik-rada-stroja')}
+            style={{ padding: '10px 16px', fontSize: 16 }}
+          >
+            Dnevnik Rada Stroja
+          </button>
         </section>
       )}
     </div>

@@ -3,6 +3,7 @@ import { AuthProvider } from './auth/AuthContext';
 import { ProtectedRoute } from './auth/ProtectedRoute';
 import { Login } from './pages/Login';
 import { Dashboard } from './pages/Dashboard';
+import { DnevnikRadaStroja } from './pages/DnevnikRadaStroja';
 
 export default function App() {
   return (
@@ -15,6 +16,14 @@ export default function App() {
             element={
               <ProtectedRoute>
                 <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/dnevnik-rada-stroja"
+            element={
+              <ProtectedRoute roles={['user']}>
+                <DnevnikRadaStroja />
               </ProtectedRoute>
             }
           />

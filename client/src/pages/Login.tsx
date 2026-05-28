@@ -18,7 +18,7 @@ export function Login() {
       await login(email, password);
       navigate('/');
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Login failed');
+      setError(err instanceof Error ? err.message : 'Prijava nije uspjela');
     } finally {
       setBusy(false);
     }
@@ -29,7 +29,7 @@ export function Login() {
       <h1>OK Strojevi</h1>
       <form onSubmit={onSubmit}>
         <label style={{ display: 'block', marginBottom: 12 }}>
-          Email
+          E-pošta
           <input
             type="email"
             value={email}
@@ -39,7 +39,7 @@ export function Login() {
           />
         </label>
         <label style={{ display: 'block', marginBottom: 12 }}>
-          Password
+          Lozinka
           <input
             type="password"
             value={password}
@@ -50,7 +50,7 @@ export function Login() {
         </label>
         {error && <p style={{ color: 'crimson' }}>{error}</p>}
         <button type="submit" disabled={busy} style={{ padding: '8px 16px' }}>
-          {busy ? 'Signing in…' : 'Sign in'}
+          {busy ? 'Prijava…' : 'Prijavi se'}
         </button>
       </form>
     </div>

@@ -5,14 +5,14 @@ import {
   updateSite,
   deleteSite,
 } from '../controllers/siteController';
-import { requireAuth, requireRole } from '../middleware/auth';
+import { requireAuth, adminOnly } from '../middleware/auth';
 import { asyncHandler } from '../utils/asyncHandler';
 
 const router = Router();
 
 router.get('/', requireAuth, asyncHandler(listSites));
-router.post('/', requireAuth, requireRole('admin'), asyncHandler(createSite));
-router.put('/:id', requireAuth, requireRole('admin'), asyncHandler(updateSite));
-router.delete('/:id', requireAuth, requireRole('admin'), asyncHandler(deleteSite));
+router.post('/', ...adminOnly, asyncHandler(createSite));
+router.put('/:id', ...adminOnly, asyncHandler(updateSite));
+router.delete('/:id', ...adminOnly, asyncHandler(deleteSite));
 
 export default router;

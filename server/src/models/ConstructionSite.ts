@@ -15,14 +15,6 @@ const constructionSiteSchema = new Schema<IConstructionSite>(
   { timestamps: true }
 );
 
-constructionSiteSchema.set('toJSON', {
-  transform: (_doc, ret) => {
-    const obj = ret as unknown as Record<string, unknown>;
-    delete obj.__v;
-    return obj;
-  },
-});
-
 export const ConstructionSite: Model<IConstructionSite> =
   mongoose.models.ConstructionSite ||
   mongoose.model<IConstructionSite>('ConstructionSite', constructionSiteSchema);

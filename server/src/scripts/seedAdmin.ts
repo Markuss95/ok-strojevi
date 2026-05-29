@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 import { connectDb } from '../config/db';
 import { User } from '../models/User';
+import { runSeed } from './seedHelpers';
 
 async function seedAdmin(): Promise<void> {
   const email = process.env.ADMIN_EMAIL;
@@ -32,9 +33,4 @@ async function seedAdmin(): Promise<void> {
   await mongoose.disconnect();
 }
 
-seedAdmin()
-  .then(() => process.exit(0))
-  .catch((err) => {
-    console.error('[seed] failed:', err);
-    process.exit(1);
-  });
+runSeed(seedAdmin);

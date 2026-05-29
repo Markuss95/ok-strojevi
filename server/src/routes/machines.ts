@@ -5,14 +5,14 @@ import {
   updateMachine,
   deleteMachine,
 } from '../controllers/machineController';
-import { requireAuth, requireRole } from '../middleware/auth';
+import { requireAuth, adminOnly } from '../middleware/auth';
 import { asyncHandler } from '../utils/asyncHandler';
 
 const router = Router();
 
 router.get('/', requireAuth, asyncHandler(listMachines));
-router.post('/', requireAuth, requireRole('admin'), asyncHandler(createMachine));
-router.put('/:id', requireAuth, requireRole('admin'), asyncHandler(updateMachine));
-router.delete('/:id', requireAuth, requireRole('admin'), asyncHandler(deleteMachine));
+router.post('/', ...adminOnly, asyncHandler(createMachine));
+router.put('/:id', ...adminOnly, asyncHandler(updateMachine));
+router.delete('/:id', ...adminOnly, asyncHandler(deleteMachine));
 
 export default router;

@@ -1,6 +1,7 @@
 import { FormEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext';
+import { toErrorMessage } from '../api/errors';
 
 export function Login() {
   const { login } = useAuth();
@@ -18,7 +19,7 @@ export function Login() {
       await login(email, password);
       navigate('/');
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Prijava nije uspjela');
+      setError(toErrorMessage(err, 'Prijava nije uspjela'));
     } finally {
       setBusy(false);
     }

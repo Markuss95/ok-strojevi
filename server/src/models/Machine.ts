@@ -17,13 +17,5 @@ const machineSchema = new Schema<IMachine>(
   { timestamps: true }
 );
 
-machineSchema.set('toJSON', {
-  transform: (_doc, ret) => {
-    const obj = ret as unknown as Record<string, unknown>;
-    delete obj.__v;
-    return obj;
-  },
-});
-
 export const Machine: Model<IMachine> =
   mongoose.models.Machine || mongoose.model<IMachine>('Machine', machineSchema);

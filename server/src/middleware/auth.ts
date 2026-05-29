@@ -43,3 +43,10 @@ export function requireRole(...roles: Role[]) {
     next();
   };
 }
+
+/**
+ * Convenience chain for admin-only endpoints. Spread into `router.post(...)`
+ * etc., e.g. `router.post('/', ...adminOnly, asyncHandler(handler))`. Pairs
+ * `requireAuth` with the role check so neither can be forgotten in isolation.
+ */
+export const adminOnly = [requireAuth, requireRole('admin')] as const;

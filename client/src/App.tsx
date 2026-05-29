@@ -6,6 +6,7 @@ import { Dashboard } from './pages/Dashboard';
 import { DnevnikRadaStroja } from './pages/DnevnikRadaStroja';
 import { ManageStrojevi } from './pages/ManageStrojevi';
 import { ManageGradilista } from './pages/ManageGradilista';
+import { DnevniciRada } from './pages/DnevniciRada';
 
 export default function App() {
   return (
@@ -42,6 +43,14 @@ export default function App() {
             element={
               <ProtectedRoute roles={['admin']}>
                 <ManageGradilista />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/dnevnici"
+            element={
+              <ProtectedRoute roles={['admin']}>
+                <DnevniciRada />
               </ProtectedRoute>
             }
           />

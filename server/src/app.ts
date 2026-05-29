@@ -4,6 +4,7 @@ import { env } from './config/env';
 import authRoutes from './routes/auth';
 import machineRoutes from './routes/machines';
 import siteRoutes from './routes/sites';
+import workLogRoutes from './routes/workLogs';
 import { notFound, errorHandler } from './middleware/error';
 
 export function createApp() {
@@ -24,6 +25,7 @@ export function createApp() {
   app.use('/api/auth', authRoutes);
   app.use('/api/machines', machineRoutes);
   app.use('/api/sites', siteRoutes);
+  app.use('/api/worklogs', workLogRoutes);
 
   app.use(notFound);
   app.use(errorHandler);

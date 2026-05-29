@@ -57,6 +57,12 @@ export function Dashboard() {
               >
                 Upravljanje gradilištima
               </button>
+              <button
+                onClick={() => navigate('/admin/dnevnici')}
+                className="btn-primary"
+              >
+                Strojevi
+              </button>
             </div>
           </section>
         )}

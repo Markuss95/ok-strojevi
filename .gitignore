@@ -3,7 +3,12 @@ dist/
 build/
 .env
 .env.local
+.env.*
+!.env.example
 *.log
+
+# Claude Code local settings — may contain machine-specific commands and secrets
+.claude/settings.local.json
 .DS_Store
 coverage/
 .vite/

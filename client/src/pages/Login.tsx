@@ -2,6 +2,7 @@ import { FormEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext';
 import { toErrorMessage } from '../api/errors';
+import logo from '../assets/logo.png';
 
 export function Login() {
   const { login } = useAuth();
@@ -28,7 +29,11 @@ export function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="card w-full max-w-sm p-6">
-        <h1 className="text-center mb-6">OK Strojevi</h1>
+        <img
+          src={logo}
+          alt="Osijek-Koteks"
+          className="mx-auto mb-6 w-48 h-auto"
+        />
         <form onSubmit={onSubmit} className="space-y-4">
           <div>
             <label className="label" htmlFor="email">E-pošta</label>

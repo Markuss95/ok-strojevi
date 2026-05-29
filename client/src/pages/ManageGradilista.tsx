@@ -1,9 +1,18 @@
-import { FormEvent, useState } from 'react';
+import { useState } from 'react';
 import { PageShell } from '../components/PageShell';
 import { ConstructionSite } from '../api/types';
 import { useCrudResource } from '../hooks/useCrudResource';
+import { SiteFormModal, SitePayload } from '../components/SiteFormModal';
 
-const EMPTY_DRAFT = { code: '', name: '' };
+type ModalState =
+  | { mode: 'add' }
+  | { mode: 'edit'; site: ConstructionSite }
+  | null;
+
+function mapsLink(s: ConstructionSite): string {
+  const loc = s.location!;
+  return `https://www.google.com/maps/search/?api=1&query=${loc.lat},${loc.lng}`;
+}
 
 export function ManageGradilista() {
   const {
@@ -18,35 +27,43 @@ export function ManageGradilista() {
   } = useCrudResource<ConstructionSite>({
     endpoint: '/sites',
     responseKey: 'sites',
-    searchableFields: (s) => [s.code, s.name],
+    searchableFields: (s) => [s.code, s.name, s.location?.address ?? ''],
     loadErrorMessage: 'Greška pri učitavanju gradilišta',
     addErrorMessage: 'Greška pri dodavanju',
     saveErrorMessage: 'Greška pri spremanju',
     deleteErrorMessage: 'Greška pri brisanju',
   });
 
-  const [newDraft, setNewDraft] = useState(EMPTY_DRAFT);
-  const [adding, setAdding] = useState(false);
+  const [modal, setModal] = useState<ModalState>(null);
+  const [busy, setBusy] = useState(false);
+  const [modalError, setModalError] = useState<string | null>(null);
 
-  const [editId, setEditId] = useState<string | null>(null);
-  const [editDraft, setEditDraft] = useState(EMPTY_DRAFT);
-
-  async function onAdd(e: FormEvent) {
-    e.preventDefault();
-    setAdding(true);
-    const ok = await create(newDraft);
-    setAdding(false);
-    if (ok) setNewDraft(EMPTY_DRAFT);
+  function openAdd() {
+    setModalError(null);
+    setModal({ mode: 'add' });
   }
 
-  function startEdit(s: ConstructionSite) {
-    setEditId(s._id);
-    setEditDraft({ code: s.code, name: s.name });
+  function openEdit(site: ConstructionSite) {
+    setModalError(null);
+    setModal({ mode: 'edit', site });
   }
 
-  async function saveEdit(id: string) {
-    const ok = await update(id, editDraft);
-    if (ok) setEditId(null);
+  function closeModal() {
+    setModal(null);
+    setModalError(null);
+  }
+
+  async function onSubmit(payload: SitePayload) {
+    if (!modal) return;
+    setBusy(true);
+    setModalError(null);
+    const ok =
+      modal.mode === 'add'
+        ? await create(payload)
+        : await update(modal.site._id, payload);
+    setBusy(false);
+    if (ok) closeModal();
+    else setModalError('Greška pri spremanju gradilišta');
   }
 
   async function onDelete(s: ConstructionSite) {
@@ -56,27 +73,11 @@ export function ManageGradilista() {
 
   return (
     <PageShell title="Upravljanje gradilištima" error={error}>
-      <section className="card p-5">
-        <h2 className="mb-3">Dodaj novo gradilište</h2>
-        <form onSubmit={onAdd} className="flex flex-wrap gap-2">
-          <input
-            placeholder="Šifra"
-            value={newDraft.code}
-            onChange={(e) => setNewDraft({ ...newDraft, code: e.target.value })}
-            required
-            className="field flex-[1_1_140px]"
-          />
-          <input
-            placeholder="Naziv"
-            value={newDraft.name}
-            onChange={(e) => setNewDraft({ ...newDraft, name: e.target.value })}
-            required
-            className="field flex-[3_1_280px]"
-          />
-          <button type="submit" disabled={adding} className="btn-primary">
-            {adding ? 'Spremanje…' : 'Dodaj'}
-          </button>
-        </form>
+      <section className="card p-5 flex items-center justify-between gap-4">
+        <h2>Gradilišta</h2>
+        <button onClick={openAdd} className="btn-primary">
+          Dodaj novo gradilište
+        </button>
       </section>
 
       <section className="card overflow-hidden">
@@ -98,76 +99,54 @@ export function ManageGradilista() {
                 <tr>
                   <th className="w-40">Šifra</th>
                   <th>Naziv</th>
+                  <th>Lokacija</th>
                   <th className="w-48">Akcije</th>
                 </tr>
               </thead>
               <tbody>
                 {filtered.map((s) => (
                   <tr key={s._id}>
-                    {editId === s._id ? (
-                      <>
-                        <td>
-                          <input
-                            value={editDraft.code}
-                            onChange={(e) =>
-                              setEditDraft({ ...editDraft, code: e.target.value })
-                            }
-                            className="field"
-                          />
-                        </td>
-                        <td>
-                          <input
-                            value={editDraft.name}
-                            onChange={(e) =>
-                              setEditDraft({ ...editDraft, name: e.target.value })
-                            }
-                            className="field"
-                          />
-                        </td>
-                        <td>
-                          <div className="flex gap-2">
-                            <button
-                              onClick={() => saveEdit(s._id)}
-                              className="btn-primary btn-sm"
-                            >
-                              Spremi
-                            </button>
-                            <button
-                              onClick={() => setEditId(null)}
-                              className="btn-secondary btn-sm"
-                            >
-                              Odustani
-                            </button>
-                          </div>
-                        </td>
-                      </>
-                    ) : (
-                      <>
-                        <td className="font-medium text-slate-900">{s.code}</td>
-                        <td className="text-slate-700">{s.name}</td>
-                        <td>
-                          <div className="flex gap-2">
-                            <button
-                              onClick={() => startEdit(s)}
-                              className="btn-secondary btn-sm"
-                            >
-                              Uredi
-                            </button>
-                            <button
-                              onClick={() => onDelete(s)}
-                              className="btn-danger btn-sm"
-                            >
-                              Obriši
-                            </button>
-                          </div>
-                        </td>
-                      </>
-                    )}
+                    <td className="font-medium text-slate-900">{s.code}</td>
+                    <td className="text-slate-700">{s.name}</td>
+                    <td className="text-slate-600">
+                      {s.location ? (
+                        <a
+                          href={mapsLink(s)}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="btn-link"
+                          title={`${s.location.lat.toFixed(5)}, ${s.location.lng.toFixed(5)}`}
+                        >
+                          {s.location.address ??
+                            `${s.location.lat.toFixed(5)}, ${s.location.lng.toFixed(5)}`}
+                        </a>
+                      ) : (
+                        <span className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded px-2 py-0.5">
+                          Nije postavljena
+                        </span>
+                      )}
+                    </td>
+                    <td>
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => openEdit(s)}
+                          className="btn-secondary btn-sm"
+                        >
+                          Uredi
+                        </button>
+                        <button
+                          onClick={() => onDelete(s)}
+                          className="btn-danger btn-sm"
+                        >
+                          Obriši
+                        </button>
+                      </div>
+                    </td>
                   </tr>
                 ))}
                 {filtered.length === 0 && (
                   <tr>
-                    <td colSpan={3} className="text-center text-slate-400 py-6">
+                    <td colSpan={4} className="text-center text-slate-400 py-6">
                       Nema rezultata
                     </td>
                   </tr>
@@ -177,6 +156,16 @@ export function ManageGradilista() {
           </div>
         )}
       </section>
+
+      {modal && (
+        <SiteFormModal
+          site={modal.mode === 'edit' ? modal.site : null}
+          busy={busy}
+          error={modalError}
+          onSubmit={onSubmit}
+          onClose={closeModal}
+        />
+      )}
     </PageShell>
   );
 }
